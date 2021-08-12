@@ -12,6 +12,11 @@ class PizzaAndBeerVMTest {
 
 
     //add tests for the pizza and beer viewmodel
+    //1 null cases
+    //2 pizza null
+    //3 beer null
+    //4 both null
+    //5 both success cases
 
 
 }

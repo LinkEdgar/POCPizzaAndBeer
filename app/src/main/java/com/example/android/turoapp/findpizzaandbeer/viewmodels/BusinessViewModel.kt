@@ -17,10 +17,15 @@ class BusinessViewModel(private val businessRepo: BusinessRepository): ViewModel
 
     private var businesses: MutableLiveData<Resource<List<Business>>>? = null
 
+    //Assumes based on assignment that we only want to query the location near the turo office but the function can handle changes in type of business as well as location
     private val location = "111 Sutter St #1300, San Francisco"
     private val typePizza = "pizza"
     private val typeBeer = "beer"
 
+    /*
+    Will fetch both pizza places and beer places and if one fails an appropriate message will be displayed otherwise the business will be added to the list of businesses.
+    Caches the results to avoid making extra network calls
+     */
     fun getBusinesses() : LiveData<Resource<List<Business>>>?{
         if (businesses == null) {
             businesses = MutableLiveData()
