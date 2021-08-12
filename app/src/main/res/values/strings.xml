@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TuroApp</string>
+
+    //Pizza and Beer strings
+    <string name="card_name">Name:</string>
+    <string name="card_rating">Rating:</string>
+    <string name="card_location">Location:</string>
+</resources>

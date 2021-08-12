@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/business_container_size">
+
+    <ImageView
+        android:id="@+id/business_image"
+        android:layout_width="@dimen/business_container_image_size"
+        android:layout_height="@dimen/business_container_image_size"
+        android:layout_marginStart="@dimen/standard_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_marginStart="@dimen/large_margin"
+        android:id="@+id/business_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/business_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/business_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Restaurant Name" />
+
+    <TextView
+        android:id="@+id/business_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/business_rating"
+        app:layout_constraintStart_toStartOf="@+id/business_name"
+        app:layout_constraintTop_toBottomOf="@+id/business_name"
+        tools:text="other attribute" />
+
+    <TextView
+        android:id="@+id/business_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/business_location"
+        app:layout_constraintTop_toBottomOf="@+id/business_location"
+        tools:text="rating: 4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
